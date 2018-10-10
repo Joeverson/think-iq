@@ -12,7 +12,7 @@ const rl = readline.createInterface({
 
 let business = null
 
-rl.write(`
+console.log(`
   -------------------------------------
   -------------------------------------
   -------------------------------------
@@ -24,10 +24,10 @@ rl.write(`
 
 
 //pausando para que o server retorne com o model de context
-rl.pause()
+// rl.pause()
 
 //rl.setPrompt('You: ');
-rl.prompt();
+// rl.prompt();
 
 rl.on('line', function (line) {
 		const commands = line.trim().split(' ')
@@ -37,10 +37,11 @@ rl.on('line', function (line) {
 			console.log(helpers.commands)
 			break;
 		case '!investment':
-			business = new Solos()
+			business = new Solos(commands[1])
 			console.log(business);
 			break;
 		default:
+		rl.pause();
 			// console.log(business.getInvestment());
 			break;
 		}
