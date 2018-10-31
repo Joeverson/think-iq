@@ -53,7 +53,7 @@ export class Solos {
     } else {
       this.toString(`
           -------------------------------
-          Parabéns você terminou o ciclo
+          Parabéns você terminou o ciclos
           -------------------------------
 
           ${this.report()}
